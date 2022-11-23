@@ -6,7 +6,11 @@ const app = express();
 app.use(express.json());
 
 app.get("/api", (req, res) => {res.status(200).json({success: true, message: "Berhasil"})});
-app.get("/", (req, res) => {res.status(200).json({success: true, message: "Test"})})
+app.get("/", (req, res) => {res.status(200).json({success: true, user:{
+    nama: "aziz",
+    kelas: "TI.21.A.3",
+    nim: 31211
+}})})
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening at port ${process.env.PORT}`);
