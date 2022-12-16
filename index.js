@@ -11,7 +11,6 @@ app.get("/", (req, res) => {res.status(200).json({success: true, user:{
     kelas: "TI.21.A.3",
     nim: 31211
 }})})
-app.get("/coba", (req, res) => res.status(200).json({success: true, message: "coba"}));
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening at port ${process.env.PORT}`);
